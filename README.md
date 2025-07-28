@@ -75,3 +75,12 @@ Abre:
 ```bash
 http://localhost:8080
 ```
+
+# Vite Tailwind Encuesta
+
+Pequeña aplicación frontend creada con React + TypeScript + Vite, que muestra una tabla de encuestas con filtros por estado.
+
+🌐 **Demo online:**  
+🔗 [https://vite-encuesta-git-main-antonios-projects-c4353432.vercel.app](https://vite-encuesta-git-main-antonios-projects-c4353432.vercel.app)
+
+---
