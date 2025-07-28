@@ -75,7 +75,7 @@ http://localhost:8080
 
 Pequeña aplicación frontend creada con React + TypeScript + Vite, que muestra una tabla de encuestas con filtros por estado.
 
-🌐 **Demo online:**  
+🌐 **Demo online in Vercel:**  
 🔗 [https://vite-encuesta.vercel.app](https://vite-encuesta.vercel.app)
 
 ---
