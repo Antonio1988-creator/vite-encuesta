@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-//import { SpeedInsights } from "@vercel/speed-insights/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import type { Encuesta } from "./types";
 import { EncuestasFilter } from "./components/EncuestasFilter";
 import { EncuestasTable } from "./components/EncuestasTable";
