@@ -1,69 +1,77 @@
-# React + TypeScript + Vite
+# Vite Tailwind Encuesta
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pequeña aplicación frontend creada con React + TypeScript + Vite, que muestra una tabla de encuestas con filtros por estado.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Características
 
-## Expanding the ESLint configuration
+- React + TypeScript  
+- Estilos con TailwindCSS  
+- Carga datos desde `public/encuestas.json`  
+- Tabla con filtro por estado (`borrador`, `publicada`, `cerrada`)  
+- Código modular y limpio  
+- Deploy en Vercel (opcional)  
+- Configuración para Docker (build y despliegue local)  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Cómo usar el proyecto
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Requisitos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js >= 16  
+- npm o yarn  
+- Docker (opcional, para usar contenedor)  
+
+---
+
+### Instalación y desarrollo local
+
+1. Clonar el repositorio
+
+```bash
+git clone https://github.com/TU_USUARIO/vite-tailwind-encuesta.git
+cd vite-tailwind-encuesta
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instalar dependencias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install
+# o yarn install
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. Levantar la app en modo desarrollo
+
+```bash
+npm run dev
+```
+Abre el navegador en la URL que indique la terminal (ejemplo: http://localhost::5173)
+
+4. Levantar la app en Docker
+
+## 🐳 Uso con Docker
+
+Puedes construir y levantar la aplicación dentro de un contenedor Docker sin necesidad de instalar Node localmente.
+
+### Construir imagen Docker
+
+Desde la raíz del proyecto (donde está el `Dockerfile`):
+
+```bash
+docker build -t encuesta-vite .
+```
+
+### Ejecutar contenedor
+
+```bash
+docker run -p 8080:80 encuesta-vite
+```
+
+### Ver la app en el navegador
+
+Abre:
+```bash
+http://localhost:8080
 ```
