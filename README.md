@@ -51,22 +51,17 @@ Abre el navegador en la URL que indique la terminal (ejemplo: http://localhost::
 
 4. Levantar la app en Docker
 
-## 🐳 Uso con Docker
 
-Puedes construir y levantar la aplicación dentro de un contenedor Docker sin necesidad de instalar Node localmente.
+## 🐳 Uso con Docker Compose
 
-### Construir imagen Docker
+Este proyecto incluye un archivo `docker-compose.yml` para construir y levantar la app en un contenedor Docker fácilmente.
+
+### Levantar la aplicación
 
 Desde la raíz del proyecto (donde está el `Dockerfile`):
 
 ```bash
-docker build -t encuesta-vite .
-```
-
-### Ejecutar contenedor
-
-```bash
-docker run -p 8080:80 encuesta-vite
+docker compose up --build
 ```
 
 ### Ver la app en el navegador
